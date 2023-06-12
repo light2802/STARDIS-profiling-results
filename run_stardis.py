@@ -1,5 +1,5 @@
 # Import necessary code
-
+import os
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -13,9 +13,14 @@ from astropy import units as u, constants as const
 
 #download_atom_data('kurucz_cd23_chianti_H_He')
 
+filename = "profile.yml"
+dir_path = os.path.dirname(os.path.abspath(__file__))
+
+os.chdir(dir_path)
+
 tracing_lambdas = np.arange(5000, 7000, .01) * u.Angstrom
 
-sim = run_stardis('profile.yml', tracing_lambdas)
+sim = run_stardis("profile.yml", tracing_lambdas)
 
 plt.plot(sim.lambdas, sim.spectrum_lambda)
 

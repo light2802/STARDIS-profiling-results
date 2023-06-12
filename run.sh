@@ -1,7 +1,7 @@
 #!/bin/bash
 
 no_thetas=(30 40)
-final_atomic_nos=(20 30)
+final_atomic_nos=(30)
 electron_scattering=("True" "False")
 line_disable=("True" "False")
 min=5000
@@ -21,8 +21,8 @@ do
 					.model.final_atomic_number = ${atomic_no} |
 					.opacity.disable_electron_scattering = ${scattering} |
 					.opacity.line.disable = ${line_dis} |
-					.opacity.line.max[0] = \"${max} AA\" |
-					.opacity.line.min[0] = \"${min} AA\" |
+					.opacity.line.max = \"${max} AA\" |
+					.opacity.line.min = \"${min} AA\" |
 					.no_of_thetas = ${thetas}
 					"
 					#echo $command

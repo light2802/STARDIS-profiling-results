@@ -3,7 +3,7 @@ atom_data: kurucz_cd23_chianti_H_He.h5
 model:
   type: marcs
   fname: sun.mod
-  final_atomic_number: 50
+  final_atomic_number: 30
 opacity:
   file:
     Hminus_bf: h_minus_cross_section_wbr.dat
@@ -15,6 +15,6 @@ opacity:
   line:
     disable: False
     broadening: [radiation, linear_stark, quadratic_stark, van_der_waals]
-    min: 6500 AA
-    max: 6600 AA
+    min: 5000 AA
+    max: 7000 AA
 no_of_thetas: 40
